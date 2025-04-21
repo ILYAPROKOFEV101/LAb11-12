@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAb11_12"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MultiEdit" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Стиль для большого текстового поля -->
+        <Style x:Key="BigTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="LightYellow"/>
+        </Style>
+
+        <!-- Стиль для маленького текстового поля -->
+        <Style x:Key="SmallTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <!-- Разделение окна на две части -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая часть -->
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="LightBlue" Offset="0.0"/>
+                    <GradientStop Color="White" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+        </StackPanel>
+
+        <!-- Правая часть -->
+        <StackPanel Grid.Column="1">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="LightGreen" Offset="0.0"/>
+                    <GradientStop Color="White" Offset="1.0"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+        </StackPanel>
     </Grid>
 </Window>
