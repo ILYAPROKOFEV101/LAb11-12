@@ -32,29 +32,39 @@
         </Grid.ColumnDefinitions>
 
         <!-- Левая часть -->
-        <StackPanel Grid.Column="0">
-            <StackPanel.Background>
+        <Grid Grid.Column="0">
+            <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="LightBlue" Offset="0.0"/>
                     <GradientStop Color="White" Offset="1.0"/>
                 </LinearGradientBrush>
-            </StackPanel.Background>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
             <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-        </StackPanel>
+            <TextBox Grid.Row="1" Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Grid.Row="2" Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+        </Grid>
 
         <!-- Правая часть -->
-        <StackPanel Grid.Column="1">
-            <StackPanel.Background>
+        <Grid Grid.Column="1">
+            <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="LightGreen" Offset="0.0"/>
                     <GradientStop Color="White" Offset="1.0"/>
                 </LinearGradientBrush>
-            </StackPanel.Background>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
             <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-            <TextBox Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
-        </StackPanel>
+            <TextBox Grid.Row="1" Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+            <TextBox Grid.Row="2" Style="{StaticResource SmallTextBoxStyle}" GotFocus="TextBox_GotFocus"/>
+        </Grid>
     </Grid>
 </Window>

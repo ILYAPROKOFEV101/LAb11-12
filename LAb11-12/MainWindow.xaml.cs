@@ -1,20 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace LAb11_12
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-        
+
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             // Получаем все текстовые поля из обеих частей окна
@@ -55,6 +54,3 @@ namespace LAb11_12
         }
     }
 }
-
-
-
